@@ -41,6 +41,37 @@ def greet(name: str) -> str:
     return f"Hello, {name}!"
 
 
+def divide(a: int, b: int) -> float:
+    """Divide two numbers.
+    
+    Args:
+        a: Numerator
+        b: Denominator (must not be zero)
+        
+    Returns:
+        The result of a divided by b
+        
+    Raises:
+        ValueError: If b is zero
+    """
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
+    return a / b
+
+
+def power(base: int, exponent: int) -> int:
+    """Raise a number to a power.
+    
+    Args:
+        base: The base number
+        exponent: The exponent
+        
+    Returns:
+        base raised to the power of exponent
+    """
+    return base ** exponent
+
+
 if __name__ == "__main__":
     print(f"Sum: {calculate_sum(5, 3)}")
     print(f"Product: {calculate_product(5, 3)}")
